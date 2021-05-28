@@ -53,7 +53,7 @@ Dart excels in these type of evolutions. It's easy to throw a quick script toget
 
 You can then grow out the directory structure as the collection of dart files grows and pull in third party packages by adding a single line to your pubspec.yaml.
 
-You can create your script with vi or notepad using print statements to debug your code and when you need it, you can move to a full blow IDE like Visual Studio Code \(yes I know they aren't allowed to call it and IDE\).
+You can create your script with vi or notepad using print statements to debug your code and when you need it, you can move to a full blow IDE like Visual Studio Code \(yes I know they aren't allowed to call it an IDE\).
 
 ## 2\) be easy to learn
 
@@ -61,13 +61,17 @@ This is an important metric and one that I think makes Dart stand out.
 
 Dart takes its syntactic heritage from C and has been described as the Love child of Java and Javascript.
 
+{% hint style="info" %}
+Dart has been described as the Love child of Java and Javascript.
+{% endhint %}
+
 You can port a Java or JavaScript program to Dart with very little effort \(I'm talking syntactically here, not about libraries\). 
 
-What this means is that just about anyone can pick up a Dart program and read the code with little training. This perhaps compare sharply with the likes of Ruby that really has a significantly different syntactical structure to the likes of Javascript.
+What this means is that just about anyone can pick up a Dart program and read the code with little training. This perhaps compares sharply with the likes of Ruby that really has a significantly different syntactical structure to the likes of Javascript.
 
 The easy to learn metric is really important for the long term maintenance of programs and the adoption within a team.
 
-Languages like C fail at this miserably. Whilst I loved C when used it, I realized many years later that its simply too expensive to use for most applications. It takes several years to get a junior programmer to the point where you can trust their code won't crash the whole system and you spend countless hours diagnosing memory corruption. Unless you a writing an OS or some real time app, the days of C are over and even then there are better alternatives.
+Languages like C fail at this miserably. Whilst I loved C when used it, I realized many years later that its simply too expensive to use for most applications. It takes several years to get a junior programmer to the point where you can trust their code and you spend countless hours diagnosing memory corruption. Unless you a writing an OS or some real time app, the days of C are over and even then there are better alternatives.
 
 Rust and Go are designed as a replacement for C and I'm not going to be overly critical of these languages except to say the you don't need to be burdened with Rust's memory management and Go just feels like its too low level for what you need building a console app \(although I do like Go's coroutines\).  
 
@@ -79,15 +83,15 @@ This is a real bug bear, and really goes back to point 2.
 
 Java is often \(fairly\) criticised for being overly verbose and requiring excessive boiler plate code.
 
-I found this delightful description of Perl:
+At the other end I found this delightful description of Perl:
 
 > Global variables abound. Crazy cryptic syntax. Ridiculous scoping rules with hacked on workarounds.
 
-Great languages need to live in the Goldilocks zone. Not too cryptic, Not too verbose, but just right; like the porridge with honey had for breaky.
+Great languages need to live in the Goldilocks zone. Not too cryptic, Not too verbose, but just right; like the warm porridge with honey had for breaky.
 
 Dart feels like it nailed this one. The language is in no way cryptic and it manages to remove lots of the common boiler plate code we get from the likes of Java.
 
-Cryptic languages are hard to maintain. When you come back to the code in two years and  it's just not obvious what it's doing, you have a problem. Really clever solutions that are had to maintain and are bad solutions.
+Cryptic languages are hard to maintain. When you come back to the code in two years and  it's just not obvious what it's doing, you have a problem. Really clever solutions, that are had to maintain, are bad solutions.
 
 ## 4\) Works with minimal tooling
 
@@ -116,7 +120,7 @@ Python and Ruby do a nice job of this as well, but C fails.
 
 ## 6\) Is fast to start and fast to run
 
-This leads of from the prior point. If you are building little script then fast turn around time is important.
+This leads off from the prior point. If you are building little script then fast turnaround time is important.
 
 Except for languages like C that require a compile this is pretty well supported across most of the language alternatives.
 
@@ -241,7 +245,9 @@ So nothing to sniff at but there are still a number of significant holes in Dart
 
 These holes are being rapidly filled and with a new focus on Dart server side they will start to move even faster.
 
-The likes of Java's package eco system is certainly way more mature as will by Python and Ruby's.
+One of the nice features of the Dart ecosystem is that once a package is published it can't be unpublished, you will never see a 'leftpad' problem like node had. 
+
+The likes of Java's package eco system is certainly way more mature as is Python and Ruby's.
 
 ## 14\) Doesn't encourage the creation of DSLs
 
