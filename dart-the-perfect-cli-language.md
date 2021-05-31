@@ -2,7 +2,7 @@
 
 So let's not be boring, let's go right to the edge of the cliff and hope we don't get thrown over.
 
-Dart with DCli is simply the best language/library for building Console applications and scripts.
+Dart with DCli is simply the best language/library combination for building Console applications and scripts.
 
 That's really all you need to know. 
 
@@ -12,7 +12,15 @@ No? What, you expect me to justify myself?
 
 Well OK, but only because I've got nothing better to do. The hornet's nest near my back door is already mad enough.
 
-Firstly a quick digression. DCli is a Dart package I've written to make it easy to build Console Apps. It's designed to make it easy to replace Bash scripts and write Console Apps with Dart. You can read more about [DCli here](https://bsutton.gitbook.io/dcli/).
+Firstly a quick digression. DCli is a Dart package Noojee has developed to make it easy to build Console Apps. 
+
+As an organisation we had accumulated an ugly mess of Ruby/Python/Go and bash scripts. This was partly due to developer preferences and partly because in each case we had a particular set of requirements that \(for practical purposes\) could only be met by a particular language/library combination.
+
+Needing the devops teams to support 5 languages \(at this point in time most of our production systems were written in Java \) made maintenance a nightmare.
+
+Dart was the first language that we thought would actually make it practical to replace all of these languages. Dart biggest shortcoming was the lack of an library that made it easy to write cli apps.
+
+And so DCli was born. DCli is essentially a swiss army ~~knife~~ library for developing console apps. You can read more about [DCli here](https://bsutton.gitbook.io/dcli/). As you read on you will begin to understand what makes Dart an outstanding language for console app development; DCli just makes it easier.
 
 Let us start by making certain we are on the same page. For the purpose of this article \(and henceforth the rest of your existence\) I'm going to define a Console app as any and all of:
 
