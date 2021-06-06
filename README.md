@@ -2,7 +2,7 @@
 
 Welcome to The Dart Side, a blog on server side programming in Dart.
 
-Dart started life as a failed front end development tool, intending to target Web clients. Then like a butterfly emerging from a chrysalis, Flutter a Dart base Mobile framework, was born.
+Dart started life as a failed front end development tool, intending to replace JavaScript. Then like a butterfly emerging from a chrysalis, Flutter a Dart base Mobile framework, was born.
 
 The world is talking about Flutter but the Dart language itself seems to get little light. This is a crime that needs to be address as it the Dart language that makes Flutter great!
 
