@@ -2,7 +2,7 @@
 
 So let's not be boring, let's go right to the edge of the cliff and hope we don't get thrown over.
 
-Dart with DCli is simply the best language/library combination for building Console applications and scripts.
+Dart with DCli is simply the best language/library combination for building Command Line Interface \(CLI\) applications and scripts.
 
 That's really all you need to know. 
 
@@ -12,25 +12,24 @@ No? What, you expect me to justify myself?
 
 Well OK, but only because I've got nothing better to do. The hornet's nest near my back door is already mad enough.
 
-Firstly a quick digression. DCli is a Dart package Noojee has developed to make it easy to build Console Apps. 
+Firstly a quick digression. DCli is a Dart package Noojee has developed to make it easy to build CLI Apps. 
 
-As an organisation we had accumulated an ugly mess of Ruby/Python/Go and bash scripts. This was partly due to developer preferences and partly because in each case we had a particular set of requirements that \(for practical purposes\) could only be met by a particular language/library combination.
+As an organisation we had accumulated an ugly mess of Ruby/Python/Go and Bash scripts. This was partly due to developer preferences and partly because in each case we had a particular set of requirements that \(for practical purposes\) could only be met by a particular language/library combination.
 
 Needing the devops teams to support 5 languages \(at this point in time most of our production systems were written in Java \) made maintenance a nightmare.
 
-Dart was the first language that we thought would actually make it practical to replace all of these languages. Dart biggest shortcoming was the lack of an library that made it easy to write cli apps.
+Dart was the first language that we thought would actually make it practical to replace all of these languages. Dart biggest shortcoming was the lack of a library that made it easy to write CLI apps.
 
 And so DCli was born. DCli is essentially a swiss army ~~knife~~ library for developing console apps. You can read more about [DCli here](https://bsutton.gitbook.io/dcli/). As you read on you will begin to understand what makes Dart an outstanding language for console app development; DCli just makes it easier.
 
-Let us start by making certain we are on the same page. For the purpose of this article \(and henceforth the rest of your existence\) I'm going to define a Console app as any and all of:
+Let us start by making certain we are on the same page. For the purpose of this article \(and henceforth the rest of your existence\) I'm going to define a CLI app as any and all of:
 
 * an application that runs from a terminal/console
 * interacts with the user via text IO only.
-* a 10 line script replacement for bash/PowerShell/Ruby/Python script
+* a 10 line script replacement for Bash/PowerShell/Ruby/Python/Go/C script
 * a 100,000 line app such as a build or deployment script
-* a full blown console application \(not that there is much need for these\).
 
-So let's start with some metrics as to what makes a good language for building Console apps.
+So let's start with some metrics as to what makes a good language for building CLI apps.
 
 **The language should:**
 
@@ -81,7 +80,7 @@ The 'easy to learn' metric is really important for the long term maintenance of 
 
 Languages like C fail at this miserably. Whilst I loved C when used it, I realized many years later that its simply too expensive to use for most applications. It takes several years to get a junior programmer to the point where you can trust their code and you spend countless hours diagnosing memory corruption. Unless you a writing an OS or some real time app, the days of C are over and even then there are better alternatives.
 
-Rust and Go are designed as a replacement for C and I'm not going to be overly critical of these languages except to say the you don't need to be burdened with Rust's memory management and Go just feels like its too low level for what you need building a console app \(although I do like Go's coroutines\).  
+Rust and Go are designed as a replacement for C and I'm not going to be overly critical of these languages except to say the you don't need to be burdened with Rust's memory management and Go just feels like its too low level for what you need building a CLI app \(although I do like Go's coroutines\).  
 
 When I first started using Dart I really found it was a delight to work with. With my background in C/Java/Javascript it was really easy to pick up and start using Dart, I really don't feel I can say the same of Go and Rust.
 
@@ -181,7 +180,7 @@ Languages like Python and Javascript fail completely on this metric and Ruby is 
 
 I don't think this is a particularly controversial one, although I do wonder at the amount of C programming that is still going on.
 
-99.9995% of console apps do not need to directly manage memory \(yes I made that stat up\). 
+99.9995% of CLI apps do not need to directly manage memory \(yes I made that stat up\). 
 
 The cost of using a non protected language such as C/C++ is considerable at every stage of an apps life;  coding, debugging, testing  and maintenance.
 
@@ -197,23 +196,23 @@ You need a debugger and it needs to be a good one and you need to be using it:\)
 
 Don't get me wrong, print/log statements still play an important part when debugging but they are just one part of your tool kit.
 
-Most of the languages that you would consider for console apps now have reasonable debuggers so this isn't really a point of differentiation.
+Most of the languages that you would consider for CLI apps now have reasonable debuggers so this isn't really a point of differentiation.
 
 My preferred Dart IDE, VS Code, also allows remote debugging and debugging within a Docker container which is really handy at times.
 
 ## 10\) allows threading for the occasional heavy lifting
 
-This isn't actually that important. Must console apps tend not to do a lot of CPU intensive work so multiple threads aren't usually that critical, but when you need it, you need it.
+This isn't actually that important. Must CLI apps tend not to do a lot of CPU intensive work so multiple threads aren't usually that critical, but when you need it, you need it.
 
 Dart provides Isolates which are like threads but with isolated heaps \(hence the name\).  The downside is you have to jump through a couple of hoops to start an isolate, the upside is it removes most of the complexity/dangers of threads.
 
-Python is probably the language with the biggest problem in this area and is perhaps the slowest of the languages you are likely to use for a console app.
+Python is probably the language with the biggest problem in this area and is perhaps the slowest of the languages you are likely to use for a CLI app.
 
-A lot of the time performance isn't that critical in console apps, but when you need it, its nice to know that its there.
+A lot of the time performance isn't that critical in CLI apps, but when you need it, its nice to know that its there.
 
 ## 11\) makes it simple to call other processes
 
-A lot of console app development is calling out to other processes and processing their input.
+A lot of CLI  app development is calling out to other processes and processing their input.
 
 This needs to be really easy to do.
 
@@ -246,13 +245,13 @@ As you can see, we didn't need to install some massive tool chain. Dart includes
 
 I have to admit that if Dart has a weakness it's this one. 
 
-Having said that, the main package you need when writing console apps is [DCli](https://bsutton.gitbook.io/dcli/).  
+Having said that, the main package you need when writing CLI apps is [DCli](https://bsutton.gitbook.io/dcli/).  
 
 {% hint style="info" %}
 DCli is an API and tooling for building cross platform command line \(CLI\) applications and scripts using the Dart programming language.
 {% endhint %}
 
-DCli is a  swiss army knife for writing console apps in Dart.
+DCli is a  swiss army knife for writing CLI apps in Dart.
 
 ```dart
 void main(){
@@ -299,21 +298,21 @@ This falls into the category of a nice to have. Many corporate environments are 
 
 ## Conclusion
 
-Declaring a particular language as the 'best' in any category is a fairly fraught conversation but there is no doubt that Dart is a strong performer when it comes to building console apps.
+Declaring a particular language as the 'best' in any category is a fairly fraught conversation but there is no doubt that Dart is a strong performer when it comes to building CLI apps.
 
 Dart performs well in virtually every category which simply makes it more flexible than any of the other language choices,
 
- Dart's greatest weakness is the maturity of third party packages. For most console apps this isn't much of a problem as DCli provides a very solid foundation and the Dart ecosystem is maturing nicely.
+ Dart's greatest weakness is the maturity of third party packages. For most CLI apps this isn't much of a problem as DCli provides a very solid foundation and the Dart ecosystem is maturing nicely.
 
 {% hint style="info" %}
 Dart is delightful
 {% endhint %}
 
-If you are using Bash script for building your console apps,  moving to Dart using the DCli package is a no brainer. Bash has done its dash and it's time to move onto something better.
+If you are using Bash script for building your CLI apps,  moving to Dart using the DCli package is a no brainer. Bash has done its dash and it's time to move onto something better.
 
 If you are doing Flutter development then using Dart/DCli for your build/production systems is really the correct choice as a reduction in the no. of languages you run in your environment is of significant benefit.
 
-For those of you coming from a Ruby/Python/C/Go environment, you really should take a look at Dart for future console apps. It solves a lot of problems and really is a delight to work with.
+For those of you coming from a Ruby/Python/C/Go environment, you really should take a look at Dart for future CLI apps. It solves a lot of problems and really is a delight to work with.
 
 ## About Noojee
 
