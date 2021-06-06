@@ -205,7 +205,7 @@ A lot of the time performance isn't that critical in CLI apps, but when you need
 
 ## 11\) makes it simple to call other processes
 
-A lot of CLI  app development is calling out to other processes and processing their input.
+A lot of CLI  app development is calling out to other processes and processing their output and is in fact the corner stone of most Bash scripts.
 
 This needs to be really easy to do.
 
