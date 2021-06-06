@@ -1,4 +1,4 @@
-# The Dart Side - Server side dart
+# The Dart Side - Server side Dart
 
 Welcome to The Dart Side, a blog on server side programming in Dart.
 
