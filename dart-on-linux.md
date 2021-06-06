@@ -34,7 +34,7 @@ Of course life is never as simple as it first looks.
 
 ### The Future is not so bright
 
-Dart supports the concept of Futures. Futures are like Javascript Promises. Essentially a future tells the Dart VM that I'm going to do some work that will take a little while, so go and do something else and I will let you know when I'm done. Think of a Future as a super lightweight thread. A function that returns a Future is an async function.
+Dart supports the concept of Futures. Futures are like Javascript Promises. Essentially a Future tells the Dart VM that I'm going to do some work that will take a little while, so go and do something else and I will let you know when I'm done. Think of a Future as a super lightweight thread. A function that returns a Future is an async function.
 
 Futures are great for a GUI app, particularly a mobile app, in that you need the GUI to be responsive even when you are fetching data or doing some large calculations.
 
@@ -47,11 +47,11 @@ await touch('/home/me/mything');
 
 The createDir and touch functions are async functions which in Dart are implemented as Futures.
 
-The 'await' statement tells dart to 'wait' for the function to finish before executing the next line.
+The 'await' statement tells Dart to 'wait' for the function to finish before executing the next line.
 
 Well, in a CLI application, just about every function call would need to be 'awaited' which is just tedious and gives zero benefits.
 
-In fact in our early experiments with Dart, Futures were the cause of a multitude of disasters as it's very easy to forget to await each function \(the latest dart linter does resolve this issue but at the time it was a significant issue\).
+In fact in our early experiments with Dart, Futures were the cause of a multitude of disasters as it's very easy to forget to await each function \(the latest Dart linter does resolve this issue but at the time it was a significant issue\).
 
 Imagine in the above example if we had forgotten to await the createDir call. The result would be that the touch call would fail as the /home/me directory wouldn't exist as yet.
 
