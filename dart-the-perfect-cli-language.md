@@ -22,13 +22,6 @@ Dart was the first language that we thought would actually make it practical to 
 
 And so DCli was born. DCli is essentially a swiss army ~~knife~~ library for developing CLI apps. You can read more about [DCli here](https://bsutton.gitbook.io/dcli/). As you read on you will begin to understand what makes Dart an outstanding language for CLI app development; DCli just makes it easier.
 
-Let us start by making certain we are on the same page. For the purpose of this article \(and henceforth the rest of your existence\) I'm going to define a CLI app as any and all of:
-
-* an application that runs from a terminal/console
-* interacts with the user via text IO only.
-* a 10 line script replacement for Bash/PowerShell/Ruby/Python/Go/C script
-* a 100,000 line app such as a build or deployment script
-
 So let's start with some metrics as to what makes a good language for building CLI apps.
 
 **The language should:**
@@ -48,7 +41,7 @@ So let's start with some metrics as to what makes a good language for building C
 13. provides good third party package support
 14. doesn't encourage the creation of DSLs
 15. doesn't encourage the creation of magic code.
-16. Is cross platform
+16. support cross platform development
 
 To avoid being lynched, rather than comparing Dart to a range of other languages let's have a look at why Dart is particularly strong in each of these metrics and understand why they are important.
 
@@ -292,7 +285,7 @@ This is really lovely unless you inherit the code and have to work out what it's
 
 There are a number of languages that encourage bad developer behaviour.  Languages that have a history of encouraging developers to use poor programming patterns should be avoided.
 
-## 16\) Is cross platform
+## 16\) support cross platform development
 
 This falls into the category of a nice to have. Many corporate environments are homogeneous so cross platform isn't that big a deal. Having said that a recent survey I conducted on reddit shows a significant number of Windows and Mac OS users are deploying to Linux servers. Having a single script that works on your dev machine and your production system is nice and saves you having to learn multiple languages or libraries.
 
