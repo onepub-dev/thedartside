@@ -2,7 +2,7 @@
 
 I'm an opinionated git, who tries not to take myself too seriously, so neither should you.
 
-Brett \(that's me\) started out as a C programmer building console apps on Linux then moved to building GUI apps on Windows in C and C++.
+Brett \(that's me\) started out as a C programmer building console apps on Unix then moved to building GUI apps on Windows in C and C++.
 
 With the advent of the Web, Brett moved to building Java web applications.
 

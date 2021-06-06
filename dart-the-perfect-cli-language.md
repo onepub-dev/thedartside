@@ -25,9 +25,9 @@ And so DCli was born. DCli is essentially a swiss army ~~knife~~ library for dev
 Let us start by making certain we are on the same page. For the purpose of this article \(and henceforth the rest of your existence\) I'm going to define a Console app as any and all of:
 
 * an application that runs from a terminal/console
-* interacts with the user via text IO only.
-* a 10 line script replacement for bash/PowerShell/Ruby/Python script
-* a 100,000 line app such as a build or deployment script
+* interacts with the user only via text io.
+* a 10 line script replacement for bash/powershell script
+* a 100,000 line app such as build or deployment script
 * a full blown console application \(not that there is much need for these\).
 
 So let's start with some metrics as to what makes a good language for building Console apps.
@@ -37,12 +37,12 @@ So let's start with some metrics as to what makes a good language for building C
 1. easily take you from a 10 line script to one that somehow grew into 200,000 lines.
 2. be easy to learn
 3. not be overly verbose nor overly cryptic. 
-4. works with minimal tooling but has a great IDE
+4. works with minimal tooling
 5. allow you to run the script without compiling
 6. is fast to start and fast to run
 7. is type safe
 8. uses a protected memory model
-9. comes with a solid debugger
+9. comes with a debugger
 10. allows threading for the occasional heavy lifting
 11. makes it simple to call other processes
 12. can be deployed as a single file exe without needing a  VM installed.
@@ -51,7 +51,7 @@ So let's start with some metrics as to what makes a good language for building C
 15. doesn't encourage the creation of magic code.
 16. Is cross platform
 
-To avoid being lynched, rather than comparing Dart to a range of other languages let's have a look at why Dart is particularly strong in each of these metrics and understand why they are important.
+To avoid being lynched rather than comparing Dart to a range of other languages let's have a look at why Dart is particularly strong in each of these metrics and understand why they are important.
 
 ## 1\) easily take you from a 10 line script to one that somehow grew into 200,000 lines.
 
@@ -67,7 +67,7 @@ You can create your script with vi or notepad using print statements to debug yo
 
 This is an important metric and one that I think makes Dart stand out.
 
-Dart takes its syntactic heritage from C and has been described and is trivial to learn if you have a Java or Javascript background.
+Dart takes its syntactic heritage from C and has been described as the Love child of Java and Javascript.
 
 {% hint style="info" %}
 Dart has been described as the Love child of Java and Javascript.
@@ -83,7 +83,7 @@ Languages like C fail at this miserably. Whilst I loved C when used it, I realiz
 
 Rust and Go are designed as a replacement for C and I'm not going to be overly critical of these languages except to say the you don't need to be burdened with Rust's memory management and Go just feels like its too low level for what you need building a console app \(although I do like Go's coroutines\).  
 
-When I first started using Dart I really found it was a delight to work with. With my background in C/Java/Javascript it was really easy to pick up and start using Dart.
+When I first started using Dart I really found it was delightful. With my background in C/Java/Javascript it was really easy to pick up and start using Dart.
 
 ## 3\) not overly verbose nor overly cryptic. 
 
@@ -95,11 +95,7 @@ At the other end I found this delightful description of Perl:
 
 > Global variables abound. Crazy cryptic syntax. Ridiculous scoping rules with hacked on workarounds.
 
-Great languages need to live in the Goldilocks zone. Not too cryptic, Not too verbose, but ju.......st right; like the warm porridge with honey I had for breaky.
-
-{% hint style="info" %}
-No Bears missed out on breakfast in the making of this post.
-{% endhint %}
+Great languages need to live in the Goldilocks zone. Not too cryptic, Not too verbose, but just right; like the warm porridge with honey had for breaky.
 
 Dart feels like it nailed this one. The language is in no way cryptic and it manages to remove lots of the common boiler plate code we get from the likes of Java.
 
@@ -118,7 +114,6 @@ sudo apt install dart
 dart pub global activate dcli
 dcli create hello.dart
 ./hello.dart
-> Hello World
 ```
 
 ## 5\) Allows you to run the script without compiling
@@ -149,7 +144,7 @@ This graph tells a different story:
 
 Source: [https://www.researchgate.net/](https://www.researchgate.net/)
 
-As the title states, the graph shows the relative cost of fixing a bug at the different stages of an application's life. Fixing a bug in maintenance cost 100 times as much as it cost to fix in design.
+As the title states, the graph shows the relative cost of fixing a bug in the different stages of an applications life. Fixing a bug in maintenance cost 100 times as much as it cost to fix in design.
 
 Typeless language move more bugs into testing or maintenance, this is a simple fact.
 
@@ -159,9 +154,9 @@ Dart goes one step further and supports Not Null by Default. Essentially this ma
 
 What this graph doesn't show is the consequential costs. A bug may take 100 times more to fix in maintenance due to the significant effort required to find and fix, but this doesn't reflect the consequential costs of losing a customer because of a bug. 
 
-I've seen bugs lose a a customer that was worth of $100, 000 a year. 
+I've seen bugs lose a a customer that was worth of $100, 000 in profit a year. 
 
-As a case in point. I was recently involved in porting a large and mature Javascript project to Dart.
+As a case in point. I was recently involved in porting a large and mature javascript project to Dart.
 
 The first team working on the project converted it to Dart without turning on Darts type safe feature \(yes Dart can be used without types\).
 
@@ -187,7 +182,7 @@ I don't think this is a particularly controversial one, although I do wonder at 
 
 The cost of using a non protected language such as C/C++ is considerable at every stage of an apps life;  coding, debugging, testing  and maintenance.
 
-As someone who once loved C/C++, when I moved my team off C/C++ to Java, I never looked back.
+As someone who loved C/C++, when I moved my team off C/C++ to Java, I never looked back.
 
 ## 9\) comes with a debugger
 
@@ -197,15 +192,15 @@ Well, I really don't need a car, a horse and buggy will get me there.
 
 You need a debugger and it needs to be a good one and you need to be using it:\)
 
-Don't get me wrong, print/log statements still play an important part when debugging.
+Don't get be wrong print/log statements still play an important part when debugging.
 
 Most of the languages that you would consider for console apps now have reasonable debuggers so this isn't really a point of differentiation.
 
-My preferred Dart IDE, VS Code, also allows remote debugging and debugging within a Docker container which is really handy at times.
+My preferred Dart IDE VS Code also allows remote debugging and debugging with in a Docker container which is really handy at times.
 
 ## 10\) allows threading for the occasional heavy lifting
 
-This isn't actually that important. Must console apps tend not to do a lot of CPU intensive work so multiple threads aren't usually that critical, but when you need it, you need it.
+This isn't actually that important. Must console apps tend not to do a lot of cpu intensive work so multiple threads aren't usually that critical, but when you need it, you need it.
 
 Dart provides Isolates which are like threads but with isolated heaps \(hence the name\).  The downside is you have to jump through a couple of hoops to start an isolate, the upside is it removes most of the complexity/dangers of threads.
 
@@ -232,7 +227,7 @@ void main() {
 This is one where Dart shines. You can compile a Dart script without any special tooling, copy just the single file exe to another machine and run the code.
 
 ```dart
-dart compile exe hello.dart
+dart compile hello.dart
 chmod +x hello
 scp hello someremotemachine:
 ssh someremotemachine
@@ -263,7 +258,7 @@ void main(){
 
 [pub.dev](https://pub.dev/) is the package repository for Dart. As of May 2021 there were 22,000 packages on pub.dev that is double what it was 12 months earlier.
 
-So nothing to sniff at but there are still a number of significant holes in Dart's package eco-system.
+So nothing to sniff at but there are still a number of significant holes in Darts' package eco-system.
 
 These holes are being rapidly filled and with a new focus on Dart server side they will start to move even faster.
 
@@ -275,7 +270,7 @@ The likes of Java's package eco system is certainly way more mature as is Python
 
 I'm look at you Ruby.
 
-DSL's seem like a nice idea, until you have to maintain someone else's code. It's hard enough having to learn a well maintained and documented language without having to maintain a half arsed DSL. Languages like Ruby encourage developers to build code that is just hard to maintain. If feels like a nice idea, but it just ain't so.
+DSL's seem like a nice idea, until you have to maintain someone else's code. It's hard enough having to learn a well maintained language and documented language without having to maintain a half arsed DSL. Languages like Ruby encourage developers to build code that is just hard to maintain. If feels like a nice idea, but it just ain't so.
 
 ## 15\) Doesn't encourage the creation of magic code.
 
@@ -297,7 +292,7 @@ This falls into the category of a nice to have. Many corporate environments are 
 
 Declaring a particular language as the 'best' in any category is a fairly fraught conversation but there is no doubt that Dart is a strong performer when it comes to building console apps.
 
-Dart performs well in virtually every category. Dart's greatest weakness is the maturity of third party packages. For most console apps this isn't much of a problem as DCli provides a very solid foundation and the Dart ecosystem is maturing nicely.
+Dart performs well in virtually every category. Its greatest weakness is the maturity of third party packages. For most console apps this isn't much of a problem as DCli provides a very solid foundation and the Dart ecosystem is maturing nicely.
 
 {% hint style="info" %}
 Dart is delightful
@@ -307,7 +302,7 @@ If you are using Bash script for building your console apps,  moving to Dart usi
 
 If you are doing Flutter development then using Dart/DCli for your build production systems is really the correct choice as a reduction in the no. of languages you run in your environment is of significant benefit.
 
-For those of you coming from a Ruby/Python/C/Go environment, you really should take a look at Dart for future console apps. It solves a lot of problems and really is a delight to work with.
+For those of you coming from a Ruby/Python/C environment, you really should take a look at Dart for future console apps. It solves a lot of problems and really is a delight for to work with.
 
 ## About Noojee
 
