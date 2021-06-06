@@ -16,11 +16,9 @@ If you are interested in the Dark side of Dart, then you have come to the right 
 
 Welcome younglings, to The Dart Side.
 
+## About Noojee
 
+Brett is one of the founders of Noojee with a long history in server side development.
 
-
-
-
-
-
+Noojee offers technical support and tooling for backend Dart development and is a major contributor to the [Conduit](https://pub.dev/packages/conduit) project \( a Dart based REST server with built in ORM\).
 
