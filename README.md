@@ -16,7 +16,7 @@ If you are interested in the Dark side of Dart, then you have come to the right 
 
 Welcome younglings, to The Dart Side.
 
-![](.gitbook/assets/dash-dart-png-white%20%281%29.png)
+![https://github.com/kevmoo/dart\_side](.gitbook/assets/dash-dart-png-white%20%281%29.png)
 
 ## About Noojee
 
