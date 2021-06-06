@@ -221,7 +221,7 @@ void main() {
 
 ## 12\) can be deployed as a single file exe without needing a  VM installed.
 
-This is one where Dart shines. You can compile a Dart script without any special tooling, copy just the single file exe to another machine and run the code.
+This is one where Dart shines. You can compile a Dart script without any special tooling, copy just the single file exe to another binary compatible machine and run the code.
 
 ```dart
 sudo apt install dart
