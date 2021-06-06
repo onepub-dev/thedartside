@@ -6,7 +6,7 @@ Dart with DCli is simply the best language/library combination for building Cons
 
 That's really all you need to know. 
 
-You can now get back on with your life knowing which language you need to use when you build your next Console application.
+You can now get back on with your life knowing which language you need to use when you build your next CLI application.
 
 No? What, you expect me to justify myself?
 
