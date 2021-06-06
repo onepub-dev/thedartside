@@ -221,7 +221,7 @@ void main() {
 
 ## 12\) can be deployed as a single file exe without needing a  VM installed.
 
-This is one where Dart shines. You can compile a Dart script without any special tooling, copy just the single file exe to another binary compatible machine and run the code.
+This is one where Dart shines. You can compile a Dart script without any special tooling, copy just the single file exe to another machine and run the code.
 
 ```dart
 sudo apt install dart
@@ -291,7 +291,7 @@ This falls into the category of a nice to have. Many corporate environments are 
 
 ## Conclusion
 
-Declaring a particular language as the 'best' in any category is a fairly fraught conversation but there is no doubt that Dart is an outstanding performer when it comes to building CLI apps.
+Declaring a particular language as the 'best' in any category is a fairly fraught conversation but there is no doubt that Dart is a strong performer when it comes to building CLI apps.
 
 Dart performs well in virtually every category which simply makes it more flexible than any of the other language choices,
 
@@ -306,16 +306,6 @@ If you are using Bash script for building your CLI apps,  moving to Dart using t
 If you are doing Flutter development then using Dart/DCli for your build/production systems is really the correct choice as a reduction in the no. of languages you run in your environment is of significant benefit.
 
 For those of you coming from a Ruby/Python/C/Go environment, you really should take a look at Dart for future CLI apps. It solves a lot of problems and really is a delight to work with.
-
-If you want to learn more about Dart and DCli:
-
-{% embed url="https://dart.dev/tutorials" %}
-
-{% embed url="https://bsutton.gitbook.io/dcli/articles/build-console-apps-in-dart" %}
-
-{% embed url="https://bsutton.gitbook.io/dcli/articles/build-cli-apps-in-dart-part-2" %}
-
-[https://bsutton.gitbook.io/dcli/dart-on-ubuntu-the-perfect-cli-dev-tooling](https://bsutton.gitbook.io/dcli/dart-on-ubuntu-the-perfect-cli-dev-tooling)
 
 ## About Noojee
 

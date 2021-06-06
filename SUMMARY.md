@@ -4,4 +4,5 @@
 * [Dart the perfect CLI language](dart-the-perfect-cli-language.md)
 * [About me](about-me.md)
 * [Notices](notice.md)
+* [Dart on Linux](dart-on-linux.md)
 
