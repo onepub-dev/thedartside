@@ -321,7 +321,13 @@ If you want to learn more about Dart and DCli:
 
 {% embed url="https://bsutton.gitbook.io/dcli/articles/build-cli-apps-in-dart-part-2" %}
 
-[https://bsutton.gitbook.io/dcli/dart-on-ubuntu-the-perfect-cli-dev-tooling](https://bsutton.gitbook.io/dcli/dart-on-ubuntu-the-perfect-cli-dev-tooling)
+{% embed url="https://bsutton.gitbook.io/dcli/dart-on-ubuntu-the-perfect-cli-dev-tooling" %}
+
+{% embed url="https://app.gitbook.com/@bsutton/s/dcli/writing-your-first-script" %}
+
+{% embed url="https://bsutton.gitbook.io/dcli/" %}
+
+
 
 ## About Noojee
 
