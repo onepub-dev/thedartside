@@ -16,6 +16,7 @@ Brett started working with Dart somewhere in 2018 and is the developer behind nu
 * [pub\_release](https://pub.dev/packages/pub_release)
 * [critical\_test](https://pub.dev/packages/critical_test)
 * [nginx\_le](https://pub.dev/packages/nginx_le)
+* [dswitch](https://pub.dev/packages/dswitch)
 * [Money2](https://pub.dev/packages/money2)
 * [posix](https://pub.dev/packages/posix)
 * [fsm2](https://pub.dev/packages/fsm2)
