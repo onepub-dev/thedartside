@@ -1,14 +1,14 @@
 # The Dart Side - Server side dart
 
-Welcome to The Dart Side, a blog on server side programing in Dart.
+Welcome to The Dart Side, a blog on server side programming in Dart.
 
-Dart started life as a front end development tool, intending to target Web clients. Then like the butterfly emerging from a chrysalis, Flutter, as a Mobile dev framework, was born.
+Dart started life as a failed front end development tool, intending to target Web clients. Then like a butterfly emerging from a chrysalis, Flutter a Dart base Mobile framework, was born.
 
-The world is talking about Flutter but the Dart language itself seems to get little light. It is Dart that makes Flutter great!
+The world is talking about Flutter but the Dart language itself seems to get little light. This is a crime that needs to be address as it the Dart language that makes Flutter great!
 
 Flutter programmers take all the limelight; it's time that we, backend Dart developers, had a chance to emerge from the dark and into the light.
 
-As the Dart eco system has matured, full stack development, using Dart as the single language, has now emerged as a reality. 
+As the Dart eco system has matured full stack development, using Dart as the sole language, has now emerged as a reality. 
 
 People are now talking about Dart on the backend and Dart is emerging from the shadows of Flutter, so it's time to shed some light on The Dart Side.
 
