@@ -1,4 +1,4 @@
-# Notice
+# Notices
 
 After naming this blog I found this image on a git repo hosted by Kevmoo who I believe is one of the Google devs. So apparently I don't have any original ideas.
 
