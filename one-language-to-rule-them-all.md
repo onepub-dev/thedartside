@@ -12,7 +12,7 @@ I'm now going to go even further out on a limb and suggest that Dart is the one 
 **Java introduced the concept of write once/run everywhere but never actually delivered on that promise.**
 {% endhint %}
 
-It is looking very much like Dart will actually deliver where Java failed.
+It is looking very much like Dart will actually deliver on Java's once hyped promise.
 
 The Dart/Flutter eco system now allows you to target every major platform:
 
@@ -24,7 +24,7 @@ The Dart/Flutter eco system now allows you to target every major platform:
 * OSX
 * Internet Of things
 
-Whilst a few of the pieces are still experimental, this will change over the next 12-18 months and I fully expect that we will have production ready versions of Dart/Flutter in every major environment.
+Whilst a few of the pieces are still in Beta, this will change over the next 12-18 months and I fully expect that we will have production ready versions of Dart/Flutter in every major environment.
 
 So why should you care? The answer or rather the problem is language fragmentation within an organisation. It has to be one of the greatest contributors to waste in any IT environment.
 
@@ -34,19 +34,29 @@ Language fragmentation may be justified if:
 * Specific requirements \(e.g. direct memory access\) dictate a specific type of language is used.
 * OS' that dictate a specific language \(iOS and Android\)
 
-Dart significantly reduces the incidence of being forced to choose another language.
+Dart significantly reduces the incidence of being forced to choose yet another language.
 
-Dart's initial focus \(well v2's focus\) has been on reducing language fragmentation for mobile device development. You can now build a single app for Android and iOS with a single language/framework.
+If you look at an Enterprise's DevOps environment you can broadly split systems into three areas:
 
-That framework \(Flutter\) has now been expanded to support Web,  and Desktop apps for Linux, Windows and Mac OS.  As Dart's reach expands, the need to choose a different language for each problem starts to go away. 
+* Frontend UI
+* Backend Services
+* CLI tooling
 
-Dart is now moving into the backend with server side tools such as [Conduit](https://pub.dev/packages/conduit) and [Shelf](https://pub.dev/packages/shelf), so now you can undertake full stack development with the Dart language.
+Whilst Dart's initial focus \(well v2's focus\) has been on reducing language fragmentation for mobile device development \(you can build a single app for Android and iOS\) you can now use Dart to build apps in all three areas.
+
+The Dart UI framework \(Flutter\) has now been expanded to support Web and Desktop apps for Linux, Windows and Mac OS.  
+
+Dart is now moving into the backend with server side tools such as [Conduit](https://pub.dev/packages/conduit) and [Shelf](https://pub.dev/packages/shelf), allowing an Enterprise to  undertake full stack development with a single language.
 
 {% hint style="warning" %}
 Conduit makes it possible to do full stack mobile development with one language
 {% endhint %}
 
-Frontend development tends to get all of the attention but in reality most of the fragmentation is occurring on the backend.
+  Finally the DCli library makes building CLI tools with Dart a simple affair.
+
+As Dart's reach expands, the need to choose a different language for each problem domain starts to go away. 
+
+With Flutter, front end language fragmentation is essentially a solved problem for a large class of applications. Frontend development tends to get all of the attention but in reality most of the fragmentation is occurring on the backend. 
 
 It is not unusual for the dev, build, deployment and backend environment of an organisation to run 6+ languages and this really starts to hurt productivity.
 
@@ -58,7 +68,7 @@ Language fragmentation results in:
 
 * Higher training costs as staff have to be trained in multiple languages
 * Lower expertise levels as staff don’t have time to specialise in one language
-* Reduce code sharing
+* Reduced code sharing
 * Increased risk as some languages may be known by only a single or few developers
 * Greater complexity in DevOps environments due to multiple languages/development environments needing to be deployed
 * Increased security risks due to more packages being installed and having to be updated/monitored for security vulnerabilities
@@ -138,5 +148,5 @@ You are still going to have to deal with the White Wizard who occupies the darke
 
 
 
-\*1 Dart/Flutter is still not suitable for what I like to call brochureware sites. Sites where a customer might visit once or twice and load times are important. There are also issues around SEO, which can be overcome, but is somewhat challenging. Dart/Flutter are well suited to Web Applications where an user signs in and an initial download isn't a problem.
+\*1 Dart/Flutter is still not suitable for what I like to call brochureware sites. Sites where a customer might visit once or twice and load times are important. There are also issues around SEO, which can be overcome, but is somewhat challenging. Dart/Flutter are well suited to Web Applications where a user signs in and an initial download isn't a problem.
 
