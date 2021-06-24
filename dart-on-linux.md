@@ -65,7 +65,7 @@ So we now had a path that made sense but we needed a common library for our team
 
 And from that need was born DCli. DCli is a library of functions and classes designed specifically for creating CLI apps and scripts.
 
-A founding principle of the libraries is that developers should never have to worry about Futures. Internally each of the DCli functions calls waitFor so that you don't need to think about futures. The above code simply becomes:
+A founding principle of the library is that developers should never have to worry about Futures. Internally each of the DCli functions calls waitFor so that you don't need to think about futures. The above code simply becomes:
 
 ```dart
 createDir('/home/me');
