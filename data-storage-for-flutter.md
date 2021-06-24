@@ -215,7 +215,13 @@ REST was designed as a protocol that is intimately bound to HTTP and uses standa
 Protobuf provides significant performance advantages over JSON. A 60ms decode of data encoded in JSON takes about 12ms when protobuf is used. You just went from Jank to no Jank.
 {% endhint %}
 
+The Application Server in turn maintains a pool of database connection ready to retrieve, delete or store data into.
 
+Placing your business logic within your Application Server is usually faster and more secure than performing those tasks on the user's device, but there are exceptions to this rule.
+
+## TO BE CONTINUED....
+
+And here we will pause for a moment. In the next blog we are going to look at the details of implementing an Application Server using the Dart Application server [Conduit](https://pub.dev/packages/conduit).
 
 
 
