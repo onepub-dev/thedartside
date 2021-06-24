@@ -69,7 +69,7 @@ Language fragmentation results in:
 * Higher training costs as staff have to be trained in multiple languages
 * Lower expertise levels as staff don’t have time to specialise in one language
 * Reduced code sharing
-* Increased risk as some languages may be known by only a single or few developers
+* Increased risk as some languages may be known by only a few developers
 * Greater complexity in DevOps environments due to multiple languages/development environments needing to be deployed
 * Increased security risks due to more packages being installed and having to be updated/monitored for security vulnerabilities
 * Reduce mobility of staff between areas of the business
@@ -98,11 +98,11 @@ This essentially meant that we were going to have to redevelop our entire build,
 
 The existing tooling consisted of a mishmash of languages and libraries including:
 
-Ruby, C, Python, Bash, Go, Java and I'm sure I've forgotten something.
+Ruby, C, Python, Bash, Go, Java and probably others that I've forgotten.
 
 Our core production applications are written in Java with some emerging Flutter Mobile apps.
 
-In total it took about 12 months to migrate our devops environment and resulted in around 140,000 lines of Dart code.  I can't offer a line comparison of the old code \(because I'm too lazy to go and find it all\) but it wouldn't be meaningful as the new production tooling does far more than the old tooling did.
+In total it took about 12 months to migrate our devops environment and resulted in around 140,000 lines of Dart code.  I can't offer a line comparison of the old code \(because I'm too lazy to go and find it\) but it wouldn't be meaningful as the new production tooling does completely different things.
 
 During the process we completely eliminated, C, Python, Bash, Go and Ruby from our environment.
 
@@ -110,15 +110,15 @@ Our main app is still written in Java with no intent of changing that as the ROI
 
 We now have a common Dart library that is shared across the production tooling. Previously we had disparate libraries across the languages.
 
-### So what was the development teams experience.
+### So what was the development team's experience.
 
 In short, they loved moving to Dart.
 
-We had few problems migrating the code as the reality is that none of the languages were bringing anything unique to the problem they were used to solve.
+We had few problems migrating the code, as the reality is that none of the languages were bringing anything unique to the problem they were used to solve.
 
 Dart is simple to use, so getting people up to speed was quick and easy.
 
-The likes of the C and Go which you might expect were used for performance reasons or maybe they needed direct memory access, simply wasn't the case. These tools were easy to port or replace.
+We suspected that the likes of the C and Go, were used for performance reasons or maybe they needed direct memory access, but this simply wasn't the case. These tools were easy to port or replace.
 
 The Ruby code was the hardest to migrate, simply because Ruby encourages 'magic' programing practices which makes tracing through the code almost impossible and as the original programmer no longer works for the company it was like extracting gold from a Dwarf.
 
@@ -130,17 +130,17 @@ What is very clear, no one wants to go back to what we had.
 
 We now have an environment that any of our team can support and we have eliminated specialist pieces of code that only a single developer was able to support.
 
-Because everyone is now working in the same language it's much easier to support each other and exchange ideas and code.
+Because everyone is now working in the same language, it's much easier to support each other and exchange ideas and code.
 
 ## Conclusion
 
-As of today it is entirely practical to build a full stack application solely using Dart and build out your devops tooling using Dart and the likes of [DCli](https://pub.dev/packages/dcli).
+As of today, it is entirely practical to build a full stack application solely using Dart and build out your devops tooling using Dart and the likes of [DCli](https://pub.dev/packages/dcli).
 
-There is no doubt that the Dart eco system still has some gaps but there is enormous momentum building to fill out the entire Dart ecosystem. Before you start a migration check that one of those gaps won't bite you on the arse. 
+There is no doubt that the Dart eco system still has some gaps but there is enormous momentum building to fill out the entire Dart ecosystem. Before you start a migration, do check that one of those gaps won't bite you on the arse. 
 
-Achieving a single language across your organisation is a long term objective, particularly if you have large set of pre existing apps, but simplifying your devops environment is entirely practical.
+Achieving a single language across your organisation is a long term objective, particularly if you have a large set of pre existing apps; but simplifying your devops environment is entirely practical.
 
-Don't rewrite apps just because there is this new language. If an app needs maintenance then that is the time to considering moving.
+Don't rewrite apps just because there is this new language. If an app needs maintenance then that is the time to considering moving it.
 
 You need to get management and team buy in or Dart will become just another language you now have to support :\)
 
@@ -148,5 +148,5 @@ You are still going to have to deal with the White Wizard who occupies the darke
 
 
 
-\*1 Dart/Flutter is still not suitable for what I like to call brochureware sites. Sites where a customer might visit once or twice and load times are important. There are also issues around SEO, which can be overcome, but is somewhat challenging. Dart/Flutter are well suited to Web Applications where a user signs in and an initial download isn't a problem.
+\*1 Dart/Flutter is still not suitable for what I like to call brochureware sites. Sites where a customer might visit once or twice and load times are important. There are also issues around SEO, which can be overcome, but are somewhat challenging. Dart/Flutter are well suited to Web Applications where a user signs in and an initial download isn't a problem.
 
