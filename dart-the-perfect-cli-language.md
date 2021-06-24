@@ -173,7 +173,7 @@ Languages like Python and Javascript fail completely on this metric and Ruby is 
 
 I don't think this is a particularly controversial one, although I do wonder at the amount of C programming that is still going on.
 
-99.9995% of CLI apps do not need to directly manipulate memory \(yes I made that stat up\). 
+99.9995% of CLI apps do not need to directly manage memory \(yes I made that stat up\). 
 
 The cost of using a non protected language such as C/C++ is considerable at every stage of an apps life;  coding, debugging, testing  and maintenance.
 
