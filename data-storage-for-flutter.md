@@ -5,7 +5,7 @@ It's 2am and I can't sleep. The rain is pouring down and the wind is howling. Li
 Flutter has made building mobile apps fun, providing a fluid framework that lets a Developer express their creative urges.  But the creativity stops when it comes time to store your data, for this we need to apply some science.
 
 {% hint style="info" %}
-Fortunately for the world I took up a career in IT and not creative writing.
+Fortunately for the world, I took up a career in IT and not creative writing.
 {% endhint %}
 
 Storing data for your mobile app can be tricky and this fact isn't much helped by the fact that there are so many ways to store your data.
@@ -32,7 +32,7 @@ Let's start by looking at what are probably the three main storage techniques yo
 * Cloud Service
 * Client/Server
 
-The differentiation between Cloud Service and Client/Server is a little arbitrary here. By Cloud Service I'm mean using a third party supplied and managed data store such as Firebase.
+The differentiation between Cloud Service and Client/Server is a little arbitrary here. By Cloud Service I mean using a third party supplied and managed data store such as Firebase.
 
 ## On Device storage
 
@@ -78,13 +78,13 @@ print(box.getAt(0)) // Dave
 
 Samples were taken from the Hive README.
 
-The down side to local storage, is just that, the storage is local. If your user loses their phone or has multiple devices then they won't be able to access their data.
+The downside to local storage is just that, the storage is local. If your user loses their phone or has multiple devices then they won't be able to access their data.
 
 There are lots of scenarios where we simply don't care about sharing data between devices and in these cases the likes of Hive are a suitable and simple alternative.
 
 You could also consider simply storing JSON objects to the file system. The problem with this technique is that decoding large amounts of JSON is CPU intensive and searching and processing JSON is not very efficient. Except for small amounts of data I would stay away from using JSON as a storage solution.
 
-The Hive site provides some benchmark performance comparisons against SQLite which show that hive is much more performant that sqlite. For small data sets I'm sure these states are valid, I'm not so certain the performance differential will hold up with larger data sets and more complex queries.
+The Hive site provides some benchmark performance comparisons against SQLite which show that hive is much more performant that sqlite. For small data sets I'm sure these statistics are valid, I'm not so certain the performance differential will hold up with larger data sets and more complex queries.
 
 ### SQL Stores
 
@@ -100,9 +100,7 @@ Transactions essentially guarantee that when you apply a set of operations, eith
 
 To make this a little more concrete, imagine that you are working as a developer at a bank.
 
-You are building an app to transfer money between accounts. So the app must perform the following operations.
-
-We need to move $10 from Brett's account to Tom's account.
+You are building an app to transfer money between accounts. We need to move $10 from Brett's account to Tom's account.
 
 At the start of the transactions, Brett has $30 and Tom has $15.
 
@@ -117,7 +115,7 @@ In total the two accounts contain $45.
 
 At the end of the transaction Brett should have $20 and Tom should have $25.
 
-Now imagine if your app crashes after step 4.  Brett's account has $20 and Tom's account hs $15. The total of the two accounts is: $35.
+Now imagine if your app crashes after step 4.  Brett's account has $20 and Tom's account has $15. The total of the two accounts is: $35.
 
 Without a transaction, you have just lost $10. In the banking world this is real money \(most money is stored electronically not as physical cash\).  Brett's account has had value removed, but that value hasn't been transferred into Tom's account.
 
@@ -167,7 +165,7 @@ Given you have decided that you need off device storage then a key advantage of 
 
 Again like Hive, if you have a significant no. of Entities in you data model then Firebase probably isn't the right choice. Unlike Hive, Firebase does support transactions.
 
-The other issue with Firebase is that you still may need to have a server somewhere that allows you to process business logic off the device. If this is case the you are probably better moving to a client/server model so you only have one API to deal with and you can combine business logic with data storage.
+The other issue with Firebase is that you still may need to have a server somewhere that allows you to process business logic off the device. If this is case then you are probably better moving to a client/server model so you only have one API to deal with and you can combine business logic with data storage.
 
 You are also going to have finer grain security controls with a client/server solution. 
 
@@ -177,27 +175,29 @@ So now we get to the meat of what The Dart Side is about.  Using Dart on the ser
 
 A traditional Client/Server model provides the most power and is the most complex to implement of all the options we have looked at.
 
+The Client is your Flutter App and the Server is the backend service\(s\) that your Flutter App relies on to implement TIDEL.
+
 A Client/Server model allows you to store your data in the cloud but also provides the ability to Transform your data off-device, providing a complete TIDEL implementation without the processing limitations of your typical mobile phone.
 
 When people talk about Full Stack Development they are usually referring to using a Client/Server model.
 
-The Client is your Flutter App and the Server is the backend service\(s\) that your Flutter App relies on to implement TIDEL.
+
 
 ![](.gitbook/assets/client-server%20%281%29.png)
 
 ### Scaling
 
-Depending the size of you user base you may need to consider how to scale your app as part of your design process.
+Depending on the size of your user base you may need to consider how to scale your app as part of your design process.
 
 {% hint style="info" %}
 The database is often the primary bottleneck when it comes to application scalability.
 {% endhint %}
 
-One advantages with on device storage is that you don't have to think about scaling. The same goes for using Firebase. Of course the problem with Firebase is that the costs will be unpredictable \( a surge in user numbers can result in a rather big surprise billing wise\).
+One advantage with on-device storage is that you don't have to think about scaling. The same goes for using Firebase. Of course the problem with Firebase is that the costs will be unpredictable \( a surge in user numbers can result in a rather big surprise billing wise\).
 
-Serverless goes someway to solving the scaling issue but again you can end up suffering from bill shock and it will almost always being much more expensive than rolling your own. I'm not going to go into Serverless here as the primary focus of this article is on storage. Perhaps a discussion for another day.
+Serverless goes some way to solving the scaling issue but again you can end up suffering from bill shock and it will almost always be much more expensive than rolling your own. I'm not going to go into Serverless here as the primary focus of this article is on storage. Perhaps a discussion for another day.
 
-The two core methods of scaling is Horizontal and Vertical which I touch on below. If you decide to go down the client/server path then you do need to consider what type of scaling will be required as part of you design. Using a stateless server \(e.g. REST\) provides the most flexibility for scaleout and allows you to leave most of the scaling decisions until later in the development process.
+The two core methods of scaling are Horizontal and Vertical which I touch on below. If your decide to go down the client/server path then you do need to consider what type of scaling will be required as part of your design. Using a stateless server \(e.g. REST\) provides the most flexibility for scaleout and allows you to leave most of the scaling decisions until later in the development process.
 
 {% hint style="info" %}
 Vertical scaling is easier and cheaper than Horizontal scaling but will only take you so far.
@@ -240,7 +240,7 @@ To do these things you are going to need access to the user's data. A traditiona
 Some of the questions that come up with the above model are:
 
 1. **Why can't my Flutter App talk directly to the Database.** Well technically it can, but you shouldn't.  The first problem is security. If your Flutter App is going to connect to the database then it will need an account on the database with a username and password.  Most database permission models are fairly simplistic. You can say that a user has access to a given table \(tblAccount\) but you can't say that a user only has access to their own rows in the table. This means that any of your Flutter users can potentially see the full set of accounts stored in tblAccount. For the Flutter App to access the db, it must either store the u/p as an asset/string in the app or you must ask the user to enter the u/p. If it's stored in your app then it's a fairly simple process to extract those details from the app binary. Either way this is considered a completely insecure method of providing access to your db.  The next problem is connection limits. DB's aren't really designed to accept 10s of thousands of short lived connections as each connection uses a large amount of memory and establishing a new connection is time consuming. On the other hand, Application Servers are designed to handle lots of short lived connections.  
-2. **Why do I need a Web Server?** Many Application Servers can serve up most of the traffic that a Web Server can, it's just that Web Servers tend to be more highly optimised to serve static content such as images so it's usually better to have the Web Server serve your static content.  Web Servers also tend to do a better job with providing a HTTPS connection. Your web server is likely to support the latest web standards \(e.g. HTTP3\) well before your Application Server does. As your customer base grows you may also need to scale out your infrastructure. Web Servers can support load balancing \(Horizontal scaling\) which allows you to run multiple Application Servers behind a single Web Server and the Web Server will automatically spread requests from your Flutter App amongst your Application Servers.  Noojee's [Nginx-LE](https://pub.dev/packages/nginx_le) is an example of a Web Server, based on Nginx, that provides encryption and management tools written in Dart. Nginx-LE makes for a quick and easy setup for Dart developers with  built in support for the Dart Web Application Server [Conduit](https://pub.dev/packages/conduit).
+2. **Why do I need a Web Server?** Many Application Servers can serve up most of the traffic that a Web Server can, it's just that Web Servers tend to be more highly optimised to serve static content such as images so it's usually better to have the Web Server serve your static content.  Web Servers also tend to do a better job with providing a HTTPS connection. Your web server is likely to support the latest web standards \(e.g. HTTP3\) well before your Application Server does. As your customer base grows you may also need to scale out your infrastructure. Web Servers can support load balancing \(Horizontal scaling\) which allows you to run multiple Application Servers behind a single Web Server and the Web Server will automatically spread requests from your Flutter App amongst your Application Servers.  Noojee's [Nginx-LE](https://pub.dev/packages/nginx_le) is an example of a Web Server, based on Nginx, that provides encryption and management tools written in Dart. Nginx-LE makes for a quick and easy setup for Dart developers with  built-in support for the Dart Web Application Server [Conduit](https://pub.dev/packages/conduit).
 3. **What does an Application Server do anyway?** For the answer read on.
 
 ## Dart Application Server
@@ -269,7 +269,7 @@ REST was designed as a protocol that is intimately bound to HTTP and uses standa
 Protobuf provides significant performance advantages over JSON. A 60ms decode of data encoded in JSON takes about 12ms when protobuf is used. You just went from Jank to no Jank.
 {% endhint %}
 
-The Application Server in turn maintains a pool of database connection ready to retrieve, delete or store data into.
+The Application Server in turn maintains a pool of database connections ready to retrieve, delete or store data into.
 
 Placing your business logic within your Application Server is usually faster and more secure than performing those tasks on the user's device, but there are exceptions to this rule.
 
