@@ -283,6 +283,56 @@ On the client you might disable the 'Add' button on the account screen. This how
 
 This is why you must implement security on the client and the server. If you are going to be lazy then skip the work on the client, but never skip the work on the server.  Your server must be bulletproof.
 
+### Scaling
+
+As noted, your database is the component most likely to suffer from performance issues. There are certainly exceptions to this such as if you are processing large images, running AI systems etc. But for the most common workloads the Db is going to be the core problem.
+
+#### Indexes
+
+The first place to start is ensuring that you have the right indexes on your tables.
+
+Every table should have an integer primary key with an associated index.
+
+You should always try to join tables by the primary key.
+
+Too few indexes is a problem as is too many.
+
+Indexes slow down inserts, updates and deletes. So the more indexes you have the slower these operations will be.
+
+Indexes speed up select statements. You need to understand what indexes your queries need. Look at the join statements, the where clauses and the order by clauses to work out what indexes you need.
+
+If you have a where clause with three 'and' clauses then you need a compound index with the same three columns used in the where clause. The where clause MUST use the columns \(the and clauses\) in the same order as the index declares the columns.
+
+Most DBs can use a two column index even if the where clause has three 'and' clauses. So you don't necessarily need an index for every where clauses.
+
+If your tables are small \(less than 100 rows\) then you may not need an index at all.
+
+Must DB's offer query analysis tools to help you identify what indexes are needed. Learn how to use these?
+
+Most DB's will provide reporting on slow queries. Check your slow query logs on a regular basis and experiment with different indexes.
+
+Remember that index will perform differently based on the size of the DB, so doing tests on a tiny DB when your production DB is huge will not be valid.
+
+## Horizontal and Vertical Scaling
+
+As with your application server Vertical Scaling is always cheaper and easier but Horizontal Scaling will take you further.
+
+Vertical Scaling of a DB involves:
+
+* adding more CPU
+* adding more memory \(always a good starting point\).
+* adding more/faster disks.
+
+Memory is of the cheapest starting point. DB's do heavy caching so more memory will always help. Check that your DB is configured to use the additional memory!
+
+Moving from spinning rust to SSD will make a huge difference but moving to RAID can add even more performance.  I'm not going to go into the nitty gritty of RAID here as there are lots of articles on the topic. RAID 10 is usually a good starting point for a DB.
+
+Horizontal scaling of a DB is quite challenging, there are all kinds of issues such as allocation of primary keys that you will need to deal with. If you think you might need to horizontally scale your DB you should start reading before you start developing.
+
+For enterprise apps you will likely get away with Vertical scaling.  You should however remember that Horizontal Scaling a DB also improved your redundancy \(the same is true for the Application Server\) so you should look at exploring what your users expect in terms of up time before you rule Horizontal scaling out.
+
+
+
 ## TO BE CONTINUED....
 
 And here we will pause for a moment. In the next blog we are going to look at the details of implementing an Application Server using the Dart Application server [Conduit](https://pub.dev/packages/conduit).
