@@ -20,7 +20,7 @@ Needing the devops teams to support 5 languages (at this point in time most of o
 
 Dart was the first language that we thought would actually make it practical to replace all of these languages. Dart biggest shortcoming was the lack of a library that made it easy to write CLI apps.
 
-And so DCli was born. DCli is essentially a swiss army ~~knife~~ library for developing CLI apps. You can read more about [DCli here](https://bsutton.gitbook.io/dcli/). As you read on you will begin to understand what makes Dart an outstanding language for CLI app development; DCli just makes it easier.
+And so DCli was born. DCli is essentially ~~a swiss army knife~~ an SDK for developing CLI apps. You can read more about [DCli here](https://bsutton.gitbook.io/dcli/). As you read on you will begin to understand what makes Dart an outstanding language for CLI app development; DCli just makes it easier.
 
 So let's start with some metrics as to what makes a good language for building CLI apps.
 
