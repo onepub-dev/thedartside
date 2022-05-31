@@ -8,7 +8,7 @@ The world is talking about Flutter but the Dart language itself seems to get lit
 
 Flutter programmers take all the limelight; it's time that we, backend Dart developers, had a chance to emerge from the dark and into the light.
 
-As the Dart eco system has matured full stack development, using Dart as the sole language, has now emerged as a reality. 
+As the Dart eco system has matured, full stack development, using Dart as the sole language, has now emerged as a reality.&#x20;
 
 People are now talking about Dart on the backend and Dart is emerging from the shadows of Flutter, so it's time to shed some light on The Dart Side.
 
@@ -16,11 +16,12 @@ If you are interested in the Dark side of Dart, then you have come to the right 
 
 Welcome younglings, to The Dart Side.
 
-![https://github.com/kevmoo/dart\_side](.gitbook/assets/dash-dart-png-white%20%281%29.png)
+![https://github.com/kevmoo/dart\_side](<.gitbook/assets/dash-dart-png-white (1).png>)
 
-## About Noojee
+## About OnePub
 
-Brett is one of the founders of Noojee with a long history in server side development.
+Brett is one of the founders of OnePUb with a long history in server side development.
 
-Noojee offers technical support and tooling for backend Dart development and is a major contributor to the [Conduit](https://pub.dev/packages/conduit) project \( a Dart based REST server with built in ORM\).
+[OnePub](https://onepub.dev) is a private package repository service for Dart.
 
+You can use it [free](https://onepub.dev).
